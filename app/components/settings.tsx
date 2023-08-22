@@ -1,9 +1,7 @@
 import { useState, useEffect, useMemo } from "react";
 
 import styles from "./settings.module.scss";
-import {
-  REPO_URL,
-} from "../constant";
+
 import ResetIcon from "../icons/reload.svg";
 import AddIcon from "../icons/add.svg";
 import CloseIcon from "../icons/close.svg";
@@ -649,11 +647,6 @@ export function Settings() {
           ) : (
             <></>
           )}
-       <ListItem>
-            <a href={REPO_URL} target="_blank">
-              点击获取独享账号
-            </a>
-            </ListItem>
           {!accessStore.hideUserApiKey ? (
             <>
               <ListItem
