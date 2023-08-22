@@ -1,7 +1,9 @@
 import { useState, useEffect, useMemo } from "react";
 
 import styles from "./settings.module.scss";
-
+import {
+  REPO_URL,
+} from "../constant";
 import ResetIcon from "../icons/reload.svg";
 import AddIcon from "../icons/add.svg";
 import CloseIcon from "../icons/close.svg";
@@ -84,7 +86,7 @@ function EditPromptModal(props: { id: string; onClose: () => void }) {
           <Input
             value={prompt.content}
             readOnly={!prompt.isUser}
-            className={styles["edit-prompt-content"]}
+            className={styles["-prompt-content"]}
             rows={10}
             onInput={(e) =>
               promptStore.update(
@@ -108,7 +110,7 @@ function UserPromptModal(props: { onClose?: () => void }) {
   const [searchPrompts, setSearchPrompts] = useState<Prompt[]>([]);
   const prompts = searchInput.length > 0 ? searchPrompts : allPrompts;
 
-  const [editingPromptId, setEditingPromptId] = useState<string>();
+  const [ingPromptId, setingPromptId] = useState<string>();
 
   useEffect(() => {
     if (searchInput.length > 0) {
@@ -647,7 +649,11 @@ export function Settings() {
           ) : (
             <></>
           )}
-
+       <ListItem>
+            <a href={REPO_URL} target="_blank">
+              点击获取独享账号
+            </a>
+            </ListItem>
           {!accessStore.hideUserApiKey ? (
             <>
               <ListItem
