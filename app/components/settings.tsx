@@ -326,8 +326,8 @@ export function Settings() {
   const hasNewVersion = currentVersion !== remoteId;
   const updateUrl = getClientConfig()?.isApp ? RELEASE_URL : UPDATE_URL;
 
-  function checkUpdate(force = false) {
-    setCheckingUpdate(true);
+  function checkUpdate(force = true) {
+    setCheckingUpdate(false);
     updateStore.getLatestVersion(force).then(() => {
       setCheckingUpdate(false);
     });
@@ -455,7 +455,7 @@ export function Settings() {
               <IconButton
                 icon={<ResetIcon></ResetIcon>}
                 text={Locale.Settings.Update.CheckUpdate}
-                onClick={() => checkUpdate(false)}
+                onClick={() => checkUpdate(true)}
               />
             )}
           </ListItem>
