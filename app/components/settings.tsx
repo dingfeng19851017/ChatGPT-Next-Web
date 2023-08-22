@@ -454,7 +454,7 @@ export function Settings() {
             ) : (
               <IconButton
                 icon={<ResetIcon></ResetIcon>}
-                 <Link href={UPDATE_URL} target="_blank" className="link">{Locale.Settings.Update.CheckUpdate}  </Link>
+                 text={Locale.Settings.Update.CheckUpdate}
                 onClick={() => checkUpdate(true)}
               />
             )}
