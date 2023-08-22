@@ -160,10 +160,10 @@ const cn = {
     },
 
     Update: {
-      Version: (x: string) => `当前版本：${x}`,
-      IsLatest: "已是最新版本",
-      CheckUpdate: "检查更新",
-      IsChecking: "正在检查更新...",
+      Version: (x: string) => `OpenAI`,
+      IsLatest: "独享 私有 永久个人ChatGPT账号",
+      CheckUpdate: "点击获取账号",
+      IsChecking: "正在跳转...",
       FoundUpdate: (x: string) => `发现新版本：${x}`,
       GoToUpdate: "前往购买GPT账号",
     },
