@@ -9,8 +9,8 @@ const en: LocaleType = {
   WIP: "Coming Soon...",
   Error: {
     Unauthorized: isApp
-      ? "Invalid API Key, please check it in [Settings](/#/settings) page."
-      : "Unauthorized access, please enter access code in [auth](/#/auth) page, or enter your OpenAI API Key.",
+      ? "无效API KEY,请检查 [设置](/#/settings) 页面."
+      : "访问密码不正确或为空，请前往[登录](/#/auth)页输入正确的访问密码，请您点击左下角[设置](/#/settings)按钮 在页面输入您的有效API Key即可正常访问，格式：sk-xxx。如需要ChatGPT账号，请[点击获取GPT账号](https://thoughts.teambition.com/share/6460f47ec98de800422c4d5e#title=OpenAI%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0)。",
   },
   Auth: {
     Title: "Need Access Code",
@@ -167,7 +167,7 @@ const en: LocaleType = {
       CheckUpdate: "Check Update",
       IsChecking: "Checking update...",
       FoundUpdate: (x: string) => `Found new version: ${x}`,
-      GoToUpdate: "Update",
+      GoToUpdate: "点击购买独享账号",
     },
     SendKey: "Send Key",
     Theme: "Theme",
