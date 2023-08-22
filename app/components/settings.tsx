@@ -455,7 +455,7 @@ export function Settings() {
               <IconButton
                 icon={<ResetIcon></ResetIcon>}
                 text={Locale.Settings.Update.CheckUpdate}
-                onClick={() => checkUpdate(true)}
+                onClick={() => checkUpdate(false)}
               />
             )}
           </ListItem>
