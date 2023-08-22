@@ -8,7 +8,7 @@ const cn = {
   Error: {
     Unauthorized: isApp
       ? "检测到无效 API Key，请前往[设置](/#/settings)页检查 API Key 是否配置正确。"
-      : "访问密码不正确或为空，请前往[登录](/#/auth)页输入正确的访问密码，或者在[设置](/#/settings)页填入你自己的 OpenAI API Key。",
+      : "访问密码不正确或为空，请前往[登录](/#/auth)页输入正确的访问密码，请您点击左下角[设置](/#/settings)按钮 在页面输入您的有效API Key即可正常访问，格式：sk-xxx。如需要ChatGPT账号，请[点击获取GPT账号](https://thoughts.teambition.com/share/6460f47ec98de800422c4d5e#title=OpenAI%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0)。",
   },
   Auth: {
     Title: "需要密码",
@@ -165,7 +165,7 @@ const cn = {
       CheckUpdate: "检查更新",
       IsChecking: "正在检查更新...",
       FoundUpdate: (x: string) => `发现新版本：${x}`,
-      GoToUpdate: "前往更新",
+      GoToUpdate: "前往购买GPT账号",
     },
     SendKey: "发送键",
     Theme: "主题",
