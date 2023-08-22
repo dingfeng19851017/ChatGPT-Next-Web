@@ -84,7 +84,7 @@ function EditPromptModal(props: { id: string; onClose: () => void }) {
           <Input
             value={prompt.content}
             readOnly={!prompt.isUser}
-            className={styles["-prompt-content"]}
+            className={styles["edit-prompt-content"]}
             rows={10}
             onInput={(e) =>
               promptStore.update(
@@ -108,7 +108,7 @@ function UserPromptModal(props: { onClose?: () => void }) {
   const [searchPrompts, setSearchPrompts] = useState<Prompt[]>([]);
   const prompts = searchInput.length > 0 ? searchPrompts : allPrompts;
 
-  const [ingPromptId, setingPromptId] = useState<string>();
+  const [editingPromptId, setEditingPromptId] = useState<string>();
 
   useEffect(() => {
     if (searchInput.length > 0) {
@@ -454,7 +454,7 @@ export function Settings() {
             ) : (
               <IconButton
                 icon={<ResetIcon></ResetIcon>}
-                 text={Locale.Settings.Update.CheckUpdate}
+                text={Locale.Settings.Update.CheckUpdate}
                 onClick={() => checkUpdate(true)}
               />
             )}
@@ -647,7 +647,7 @@ export function Settings() {
           ) : (
             <></>
           )}
-          
+
           {!accessStore.hideUserApiKey ? (
             <>
               <ListItem
